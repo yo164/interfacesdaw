@@ -1,0 +1,53 @@
+:root{
+	--main-colour: #7da2a9
+}
+
+body{
+	background-color: #CCC;
+	width: 90vw;
+	min-width: 300px;
+	border: solid 1px #fff;
+	text-align: center;
+}
+
+header{
+	background-color: var(--main-colour);
+	width: 90vw;
+	min-width: 300px;
+	padding-top: 10px;
+	color: #fff;
+}
+
+aside, section, nav {
+	float:left;
+	color: var(--main-colour);
+}
+
+footer{
+	clear:both;
+	color: #fff;
+	background-color: var(--main-colour);
+}
+nav{
+	width: 25%;
+}
+
+nav h3{
+	margin: 15px;
+}
+
+nav a{
+	display: block;
+}
+
+h1, h2, h3{
+	margin: 0px;
+}
+
+h1{
+	font-size: 5vw;
+}
+
+h2{
+	padding: 10px;
+}

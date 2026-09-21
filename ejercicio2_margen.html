@@ -1,0 +1,95 @@
+﻿<!--Ejercicio:
+A partir del código HTML proporcionado, determinar las reglas CSS necesarias 
+para añadir los siguientes márgenes, rellenos y estilos. El código HTML 
+facilitado deberá ser revisado pero no modificado.
+
+El elemento body tendrá:
+    - Color de fondo:#CCCCCC
+    - anchura del 90% del viewport y un mínimo de 300px
+    - un borde (solido,#FFFFFF)
+    - font-family:Geneva,Arial,Helvetica,sans-serif;
+El elemento header tendrá:
+    - Color de fondo:#7DA2A9
+    - anchura del 90% del viewport y un mínimo de 300px
+    - añadir un relleno superior
+    - eliminar el estilo por defecto del h2, h1 y h3 (margin:0)
+    - h1 tendrá tamaño del 5% del ancho del viewport (font-size:5vw)
+    - h2 tendrá un relleno de 10px
+
+El elemento nav tendrá una anchura del 25% respecto a su padre
+El título del elemento nav tendrá un margen de 15px
+El elemento section tendrá un tamaño del 50% respecto a su padre
+El elemento article tendrá un margen y un relleno de 10px
+El elemento article tendrá un borde redondeado de 10px
+El elemento header del article tendrá un relleno 5px y un borde redondeado de 10px.
+El elemento footer del article tendrá un relleno 5px y un borde redondeado de 10px
+El elemento aside tendrá un tamaño del 25% respecto a su padre. El h3 y el p (del aside) un margen de 15px
+El elemento footer tendrá un relleno de 15px
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML5</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Header</h1>
+      <h2>Subtitle</h2>
+    </header>
+    <div class="container">
+      <nav>
+        <h3>Nav</h3>
+        <a href="">Link 1</a>
+        <a href="">Link 2</a>
+        <a href="">Link 3</a>
+      </nav>
+      <section>
+        <article>
+          <header>
+            <h1>Article Header</h1>
+          </header>
+
+          <p>
+            Lorem ipsum dolor HTML5 nunc aut nunquam sit amet, consectetur
+            adipiscing elit. Vivamus at est eros, vel fringilla urna.
+          </p>
+          <p>
+            Per inceptos himenaeos. Quisque feugiat, justo at vehicula
+            pellentesque, turpis lorem dictum nunc.
+          </p>
+
+          <footer>
+            <h2>Article Footer</h2>
+          </footer>
+        </article>
+        <article>
+          <header>
+            <h1>Article Header</h1>
+          </header>
+          <p>
+            HTML5: "Lorem ipsum dolor nunc aut nunquam sit amet, consectetur
+            adipiscing elit. Vivamus at est eros, vel fringilla urna.
+            Pellentesque odio
+          </p>
+          <footer>
+            <h2>Article Footer</h2>
+          </footer>
+        </article>
+      </section>
+      <aside>
+        <h3>Aside</h3>
+        <p>
+          HTML5: "Lorem ipsum dolor nunc aut nunquam sit amet, consectetur
+          adipiscing elit. Vivamus at est eros, vel fringilla urna. Pellentesque
+          odio rhoncus
+        </p>
+      </aside>
+      <footer>
+        <h2>Footer</h2>
+      </footer>
+    </div>
+  </body>
+</html>
