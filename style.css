@@ -1,16 +1,25 @@
+html{
+	
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 :root{
 	--main-colour: #7da2a9
 }
 
 body{
-	background-color: #CCC;
+	background-color: #e9e9e9;
 	width: 90vw;
 	min-width: 300px;
 	border: solid 1px #fff;
 	text-align: center;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+
 }
 
-header{
+body>header{
 	background-color: var(--main-colour);
 	width: 90vw;
 	min-width: 300px;
@@ -23,11 +32,7 @@ aside, section, nav {
 	color: var(--main-colour);
 }
 
-footer{
-	clear:both;
-	color: #fff;
-	background-color: var(--main-colour);
-}
+
 nav{
 	width: 25%;
 }
@@ -35,6 +40,14 @@ nav{
 nav h3{
 	margin: 15px;
 }
+
+
+
+aside h3,
+aside p{
+	margin: 15px;
+}
+
 
 nav a{
 	display: block;
@@ -50,4 +63,39 @@ h1{
 
 h2{
 	padding: 10px;
+}
+
+section{
+	width: 50%;
+}
+
+article{
+	background-color: #CCC;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+article header{
+	padding: 5px;
+	border-radius: 10px;
+	background-color: var(--main-colour);
+	color: #fff;
+}
+
+article footer{
+		border-radius: 10px;
+
+}
+
+aside{
+	width: 25%;
+}
+
+footer{
+	clear:both;
+	color: #fff;
+	background-color: var(--main-colour);
+	padding: 15px;
+
 }
