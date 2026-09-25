@@ -4,6 +4,8 @@ export function paintCharacters(character) {
     const card = document.createElement("div");
     card.classList.add("character-card");
 
+        card.dataset.id = character.id;
+
 
     // Div superior: imagen
     const imageContainer = document.createElement("div");
