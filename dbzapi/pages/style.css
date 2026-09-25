@@ -57,7 +57,7 @@ body {
 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 
-    overflow: hidden;
+    overflow: visible;
 }
 
 
@@ -66,7 +66,7 @@ body {
 .character-detail-image {
     width: 50%;
     align-self: stretch;
-
+    border-radius: 15px 0 0 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,7 +192,7 @@ body {
 .transformation-image {
     width: 100%;
     height: 230px;
-    border-radius: 11px;
+    border-radius: 11px 11px 0 0;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,7 +1,7 @@
 import { Character } from "../models/character.js";
 import { CharacterDetail } from "../models/characterDetail.js";
 import { Transformation } from "../models/transformation.js";
-
+import { Planet } from "../models/planet.js";
 
 const URL_GENERAL_PERSONAJES =
     "https://dragonball-api.com/api/characters?limit=58";
@@ -76,6 +76,14 @@ export function getById(id) {
 
                 transformations.push(transformation);
             });
+            const planeta = data.originPlanet;
+            const planet = new Planet(
+                planeta.id,
+                planeta.name,
+                planeta.description,
+                planeta.image,
+                planeta.deletedAt
+            )
 
 
             const character = new CharacterDetail(
@@ -89,7 +97,7 @@ export function getById(id) {
                 data.image,
                 data.affiliation,
                 data.deletedAt,
-                data.originPlanet,
+                planet,
                 transformations
             );
 
