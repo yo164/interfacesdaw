@@ -61,6 +61,11 @@ navPlanetas.addEventListener("click", () => {
             for (const element of array) {
 
                 const carta = paintPlanet(element);
+                carta.addEventListener("click", () => {
+                    const id = carta.dataset.id;
+
+                    window.location.href = `pages/planetDetail.html?id={$id}`;
+                })
 
                 main.appendChild(carta);
             }
