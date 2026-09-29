@@ -64,8 +64,8 @@ navPlanetas.addEventListener("click", () => {
                 carta.addEventListener("click", () => {
                     const id = carta.dataset.id;
 
-                    window.location.href = `pages/planetDetail.html?id={$id}`;
-                })
+                    window.location.href = `pages/planetDetail.html?id=${id}`;
+                });
 
                 main.appendChild(carta);
             }
@@ -100,9 +100,5 @@ home.addEventListener('click', () => {
     loadHome();
 })
 
-card.addEventListener("click", () => {
-    const id = card.dataset.id;
 
-    window.location.href = `character-detail.html?id=${id}`;
-});
 

@@ -42,12 +42,24 @@ export function paintCharacterDetail(character) {
     const affiliation = document.createElement("li");
     affiliation.textContent = `Afiliación: ${character.affiliation}`;
 
+    const originPlanet = document.createElement("li");
+    originPlanet.textContent = "Planeta: ";
+    const planetWord = document.createElement("a");
+    planetWord.href = `planetDetail.html?id=${character.originPlanet.id}`;
+    planetWord.className = "enlacePlaneta";
+
+    planetWord.textContent = `${character.originPlanet.name}`;
+    
+
+
+    originPlanet.appendChild(planetWord);
 
     list.appendChild(race);
     list.appendChild(gender);
     list.appendChild(ki);
     list.appendChild(maxKi);
     list.appendChild(affiliation);
+    list.appendChild(originPlanet)
 
     infoContainer.appendChild(name);
     infoContainer.appendChild(description);

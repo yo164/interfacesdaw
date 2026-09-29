@@ -2,8 +2,10 @@ import { Planet } from "../models/planet.js";
 
 export function paintPlanet(planet) {
 
+
     const card = document.createElement("div");
     card.classList.add("planet-card");
+    card.dataset.id = planet.id;
 
 
     // IMAGEN
