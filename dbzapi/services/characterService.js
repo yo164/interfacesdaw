@@ -104,3 +104,52 @@ export function getById(id) {
             return character;
         });
 }
+
+export function getByFilters(filters) {
+    if (filters === "") {
+        filters = "limit=58";
+    }
+
+    const URL_FILTRADO = `https://dragonball-api.com/api/characters?${filters}`;
+
+    const array = [];
+    return fetch(URL_FILTRADO)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("fallo al recibir filtrados");
+            }
+            return response.json();
+
+        })
+        .then(data => {
+            console.log(data);
+            let personajes ;
+            if(Array.isArray(data)){
+                personajes = data;
+            }else{
+                personajes = data.items;
+            }
+            
+
+            personajes.forEach(element => {
+
+                const character = new Character(
+                    element.id,
+                    element.name,
+                    element.ki,
+                    element.maxKi,
+                    element.race,
+                    element.gender,
+                    element.description,
+                    element.image,
+                    element.affiliation,
+                    element.deletedAt
+                );
+
+                array.push(character);
+            });
+
+            return array;
+        })
+
+}

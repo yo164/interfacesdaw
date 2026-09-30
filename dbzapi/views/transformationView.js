@@ -4,6 +4,9 @@ export function paintTransformations(transformation) {
     const card = document.createElement("div");
     card.classList.add("transformation-card");
 
+    card.dataset.id = transformation.id;
+
+
 
     // Div superior: imagen
     const imageContainer = document.createElement("div");

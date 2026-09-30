@@ -13,9 +13,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const card = paintCharacterDetail(character);
         characterContainer.appendChild(card);
+        
+
+        
 
         for (const transformation of character.transformations) {
             const transformationCard = paintTransformation(transformation);
+
+            transformationCard.addEventListener("click", () => {
+                const id = transformationCard.dataset.id;
+
+                window.location.href = `transformationDetail.html?id=${id}`;
+            })
             transformationsContainer.appendChild(transformationCard);
         }
     })

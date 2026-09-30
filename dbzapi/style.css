@@ -10,14 +10,29 @@ header {
     padding: 0 40px;
 
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: stretch;
 
     border-bottom: 5px solid #ffd600;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 
     color: #ffffff;
 }
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 0 0;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 5px;
+}
+
 
 header h1 {
     margin: 0;
@@ -71,6 +86,9 @@ header nav a:hover {
     width: 100%;
     
 }
+
+
+
 
 
 .home {
@@ -156,7 +174,19 @@ header nav a:hover {
 
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
 }
+/*filtros*/
 
+.filters {
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+
+    padding: 25px 40px;
+}
 
 
 

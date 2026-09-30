@@ -77,6 +77,7 @@ export function paintTransformation(transformation) {
 
     const card = document.createElement("div");
     card.classList.add("transformation-card");
+    card.dataset.id = transformation.id;
 
     const imageContainer = document.createElement("div");
     imageContainer.classList.add("transformation-image");
