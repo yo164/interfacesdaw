@@ -28,19 +28,54 @@ const home = document.getElementById("home");
 const main = document.getElementById("principal");
 
 const searchDiv = document.getElementById("search-container");
-
+let personajes = [];
 navaPersonajes.addEventListener('click', () => {
     main.style.padding = "40px";
     searchDiv.innerHTML = "";
-    searchDiv.appendChild(showSearchInput());
-    searchDiv.appendChild(createSearchButton());
+    const searchLabel = showSearchInput();
+    searchDiv.appendChild(searchLabel);
+    const searchInput = searchLabel.querySelector("input");
+    //const searchButton = createSearchButton();
+
+    
+    //searchDiv.appendChild(searchButton);
+
     showFilters();
+
+    // Evento del botón buscar
+    searchInput.addEventListener("input", () => {
+        const name = searchInput.value.trim().toLowerCase();
+        /*if (name.length < 3) {
+            return;
+        }
+        console.log(name);*/
+
+        const personajesFiltrados = personajes.filter(personaje =>
+            personaje.name.toLowerCase().startsWith(name)
+        );
+
+        main.innerHTML = "";
+
+        for (const element of personajesFiltrados) {
+            const carta = paintCharacters(element);
+
+            carta.addEventListener("click", () => {
+                const id = carta.dataset.id;
+
+                window.location.href = `pages/characterDetail.html?id=${id}`;
+            });
+
+            main.appendChild(carta);
+        }
+    });
+
+
 
 
     getAll().then(array => {
         main.innerHTML = "";
 
-
+        personajes = array;
         for (const element of array) {
             const carta = paintCharacters(element);
 
@@ -266,7 +301,7 @@ function getName() {
 
     return name;
 }
-
+/*
 function createSearchButton() {
     const button = document.createElement("button");
     button.className = "search-button";
@@ -279,36 +314,4 @@ function createSearchButton() {
 }
 
 
-const searchButton = document.getElementById("search-button");
-
-searchButton.addEventListener("click", () => {
-    const name = getName();
-
-    main.innerHTML = "";
-
-    getByName(name).then
-
-    getByFilters(filters).then(array => {
-
-
-        for (const element of array) {
-            const carta = paintCharacters(element);
-
-            carta.addEventListener("click", () => {
-                const id = carta.dataset.id;
-
-                window.location.href = `pages/characterDetail.html?id=${id}`;
-            });
-
-            main.appendChild(carta);
-        }
-
-
-    }).catch(error => {
-        console.error("error pintando cartas", error);
-    });
-
-
-
-    console.log(filters);
-});
+*/
